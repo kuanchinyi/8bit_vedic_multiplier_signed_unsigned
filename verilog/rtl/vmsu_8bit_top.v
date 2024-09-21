@@ -485,10 +485,8 @@ module dff (
 	input d,
 	input clk,
 	input rst,
-	output q
+	output reg q
 );
-
-	reg q;
 
 	always @(posedge clk or negedge rst)
 		if (~rst) begin
