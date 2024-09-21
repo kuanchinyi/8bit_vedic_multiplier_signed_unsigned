@@ -93,7 +93,7 @@ vmsu_8bit_top vmsu_8bit_top (
     .rst(wb_rst_i),    // Connect reset from wishbone reset input
     .a(la_data_in[7:0]),    // Map input A from IO pads (8 bits)
     .b(la_data_in[15:8]),   // Map input B from IO pads (8 bits)
-    .control(la_data_in[0]), // Map control signal from Logic Analyzer
+    .control(la_data_in[16]), // Map control signal from Logic Analyzer
     .p(la_data_out[15:0])   // Output the result P to IO pads (16 bits)
 );
 

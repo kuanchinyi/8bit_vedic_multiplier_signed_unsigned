@@ -488,8 +488,8 @@ module dff (
 	output reg q
 );
 
-	always @(posedge clk or negedge rst)
-		if (~rst) begin
+	always @(posedge clk or posedge rst)
+		if (rst) begin
 			q <= 0;
 		end  else begin
 			q <= d;
