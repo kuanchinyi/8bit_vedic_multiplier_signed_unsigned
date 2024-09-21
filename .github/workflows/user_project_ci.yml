@@ -118,7 +118,7 @@ jobs:
           tar -cf /tmp/${{ env.dep_name }}.tar -C ${{ env.dep_root }} .
 
       - name: Upload Dependencies Tarball
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ env.dep_name }}-tarball
           path: /tmp/${{ env.dep_name }}.tar
