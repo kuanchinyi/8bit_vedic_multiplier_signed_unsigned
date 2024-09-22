@@ -48,3 +48,48 @@ Outcome: To successfully fabricate the “8-Bit Vedic Multiplier with Signed and
 3. **To test the functionality of an 8-bit vedic multiplier with signed and unsigned capability**
 
 Outcome: To successfully conduct test on the fabricated  8-bit vedic multiplier with signed and unsigned capability circuit. Thorough verification and testing should be conducted to ensure functionality. The test should include the functionality test, speed test, accuracy and power consumption test to ensure that it meet the desire specifications. The physical test result should be cross-checked with the initial objective and simulation results to match the required result. Successfully testing and validation of the circuit will establish its readiness for integration into a larger arithmetic processor, enabling efficient multiplication operation.
+
+## Block Diagram
+<p align="center">
+<img width="70%" alt="Block_Diagram_Top_Level.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_Top_Level.jpg">
+</p>
+
+<p align="center">
+<img width="60%" alt="Block_Diagram_VMSU_TOP.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_VMSU_Top.jpg">
+</p>
+<br/>
+
+<p align="center">
+<img width="70%" alt="Block_Diagram_VMSU_Pipelined.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_VMSU_Pipelined.jpg">
+</p>
+
+<p align="center">
+<img width="70%" alt="Block_Diagram_VMSU.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_VMSU.jpg"> 
+</p>
+<br/>
+<br/>
+
+<p align="center">
+<img width="70%" alt="Block_Diagram_8bit_vedic_multiplier.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_8bit_vedic_multiplier.jpg">
+</p>
+<br/>
+
+<p align="center">
+<img width="70%" alt="Block_Diagram_4bit_vedic_multiplier.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_4bit_vedic_multiplier.jpg">
+</p>
+<br/>
+
+<p align="center">
+<img width="70%" alt="Block_Diagram_2bit_vedic_multiplier.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_2bit_vedic_multiplier.jpg">
+</p>
+<br/>
+
+<p align="center">
+<img width="70%" alt="Block_Diagram_CLA_4bit.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_CLA_4bit.jpg">
+</p>
+<br/>
+
+<p align="center">
+<img width="70%" alt="Block_Diagram_complementary.jpg" src="https://github.com/kuanchinyi/8bit_vedic_multiplier_signed_unsigned/blob/main/Block_Diagram_complementary.jpg">
+</p>
+<br/>
