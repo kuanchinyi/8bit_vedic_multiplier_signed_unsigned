@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-My Project 1
-My Project 2
-=======
 # Proposal Title: 8-Bit Vedic Multiplier with Signed and Unsigned Capability
 
 **Introduction**
@@ -52,4 +48,3 @@ Outcome: To successfully fabricate the “8-Bit Vedic Multiplier with Signed and
 3. **To test the functionality of an 8-bit vedic multiplier with signed and unsigned capability**
 
 Outcome: To successfully conduct test on the fabricated  8-bit vedic multiplier with signed and unsigned capability circuit. Thorough verification and testing should be conducted to ensure functionality. The test should include the functionality test, speed test, accuracy and power consumption test to ensure that it meet the desire specifications. The physical test result should be cross-checked with the initial objective and simulation results to match the required result. Successfully testing and validation of the circuit will establish its readiness for integration into a larger arithmetic processor, enabling efficient multiplication operation.
->>>>>>> origin
