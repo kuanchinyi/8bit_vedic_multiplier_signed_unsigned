@@ -1,11 +1,11 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1726925975
+timestamp 1726994195
 << obsli1 >>
 rect 1104 2159 35236 36465
 << obsm1 >>
-rect 934 2128 35248 36496
+rect 934 2128 35296 36496
 << metal2 >>
 rect 9034 0 9090 800
 rect 27250 0 27306 800
@@ -199,8 +199,8 @@ port 37 nsew ground bidirectional
 string FIXED_BBOX 0 0 36400 38800
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 1987138
-string GDS_FILE /home/cykuan/chinyi2/8bit_vedic_multiplier_signed_unsigned/openlane/vmsu_8bit_top/runs/24_09_21_21_38/results/signoff/vmsu_8bit_top.magic.gds
-string GDS_START 602366
+string GDS_END 2578718
+string GDS_FILE /home/cykuan/chinyi2/8bit_vedic_multiplier_signed_unsigned/openlane/vmsu_8bit_top/runs/24_09_22_16_35/results/signoff/vmsu_8bit_top.magic.gds
+string GDS_START 675906
 << end >>
 

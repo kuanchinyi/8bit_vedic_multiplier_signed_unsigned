@@ -64,17 +64,17 @@ set_multicycle_path -hold 1  -through [get_ports {wbs_stb_i}]
 #------------------------------------------#
 
 # Clock source latency
-set usr_clk_max_latency 4.7
-set usr_clk_min_latency 4.24
-set clk_max_latency 5.00
-set clk_min_latency 4.90
+set usr_clk_max_latency 4.57
+set usr_clk_min_latency 4.11
+set clk_max_latency 5.0
+set clk_min_latency 4.9
 set_clock_latency -source -max $clk_max_latency [get_clocks {clk}]
 set_clock_latency -source -min $clk_min_latency [get_clocks {clk}]
 puts "\[INFO\]: Setting clock latency range: $clk_min_latency : $clk_max_latency"
 
 # Clock input Transition
-set usr_clk_tran 0.11
-set clk_tran 0.6
+set usr_clk_tran 0.13
+set clk_tran 0.61
 set_input_transition $clk_tran [get_ports $clk_input]
 puts "\[INFO\]: Setting clock transition: $clk_tran"
 
@@ -87,7 +87,7 @@ set_input_delay -max 3.89 -clock [get_clocks {clk}] [get_ports {wbs_adr_i[*]}]
 set_input_delay -max 4.13 -clock [get_clocks {clk}] [get_ports {wbs_stb_i}]
 set_input_delay -max 4.61 -clock [get_clocks {clk}] [get_ports {wbs_dat_i[*]}]
 set_input_delay -max 4.74 -clock [get_clocks {clk}] [get_ports {wbs_cyc_i}]
-set_input_delay -min 0.68 -clock [get_clocks {clk}] [get_ports {la_data_in[*]}]
+set_input_delay -min 0.8 -clock [get_clocks {clk}] [get_ports {la_data_in[*]}]
 set_input_delay -min 0.3  -clock [get_clocks {clk}] [get_ports {la_oenb[*]}]
 set_input_delay -min 0.79 -clock [get_clocks {clk}] [get_ports {wbs_adr_i[*]}]
 set_input_delay -min 1.04 -clock [get_clocks {clk}] [get_ports {wbs_dat_i[*]}]

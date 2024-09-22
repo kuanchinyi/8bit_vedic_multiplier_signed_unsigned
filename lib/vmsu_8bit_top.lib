@@ -50,7 +50,7 @@ library (vmsu_8bit_top) {
   cell ("vmsu_8bit_top") {
     pin("clk") {
       direction : input;
-      capacitance : 0.0082;
+      capacitance : 0.0104;
     }
     pin("control") {
       direction : input;
@@ -58,7 +58,7 @@ library (vmsu_8bit_top) {
     }
     pin("rst") {
       direction : input;
-      capacitance : 0.0104;
+      capacitance : 0.0030;
     }
     bus("a") {
       bus_type : a;
@@ -74,7 +74,7 @@ library (vmsu_8bit_top) {
     }
     pin("a[5]") {
       direction : input;
-      capacitance : 0.0029;
+      capacitance : 0.0027;
     }
     pin("a[4]") {
       direction : input;
@@ -86,7 +86,7 @@ library (vmsu_8bit_top) {
     }
     pin("a[2]") {
       direction : input;
-      capacitance : 0.0028;
+      capacitance : 0.0027;
     }
     pin("a[1]") {
       direction : input;
@@ -115,7 +115,7 @@ library (vmsu_8bit_top) {
     }
     pin("b[4]") {
       direction : input;
-      capacitance : 0.0028;
+      capacitance : 0.0031;
     }
     pin("b[3]") {
       direction : input;
@@ -123,7 +123,7 @@ library (vmsu_8bit_top) {
     }
     pin("b[2]") {
       direction : input;
-      capacitance : 0.0028;
+      capacitance : 0.0029;
     }
     pin("b[1]") {
       direction : input;
@@ -144,27 +144,27 @@ library (vmsu_8bit_top) {
     }
     pin("p[14]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0015;
     }
     pin("p[13]") {
       direction : output;
-      capacitance : 0.0011;
+      capacitance : 0.0013;
     }
     pin("p[12]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0015;
     }
     pin("p[11]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0008;
     }
     pin("p[10]") {
       direction : output;
-      capacitance : 0.0011;
+      capacitance : 0.0015;
     }
     pin("p[9]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0014;
     }
     pin("p[8]") {
       direction : output;
@@ -172,19 +172,19 @@ library (vmsu_8bit_top) {
     }
     pin("p[7]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0015;
     }
     pin("p[6]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0017;
     }
     pin("p[5]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0015;
     }
     pin("p[4]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0011;
     }
     pin("p[3]") {
       direction : output;
@@ -192,15 +192,15 @@ library (vmsu_8bit_top) {
     }
     pin("p[2]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0010;
     }
     pin("p[1]") {
       direction : output;
-      capacitance : 0.0011;
+      capacitance : 0.0013;
     }
     pin("p[0]") {
       direction : output;
-      capacitance : 0.0012;
+      capacitance : 0.0014;
     }
     }
   }

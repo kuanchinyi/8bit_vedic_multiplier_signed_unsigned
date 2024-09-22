@@ -154,7 +154,7 @@ MACRO vmsu_8bit_top
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.742500 ;
+    ANTENNAGATEAREA 0.990000 ;
     PORT
       LAYER met2 ;
         RECT 45.170 0.000 45.450 4.000 ;
@@ -316,7 +316,7 @@ MACRO vmsu_8bit_top
   PIN rst
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.990000 ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met2 ;
         RECT 136.250 0.000 136.530 4.000 ;
@@ -346,7 +346,7 @@ MACRO vmsu_8bit_top
       LAYER li1 ;
         RECT 5.520 10.795 176.180 182.325 ;
       LAYER met1 ;
-        RECT 4.670 10.640 176.240 182.480 ;
+        RECT 4.670 10.640 176.480 182.480 ;
       LAYER met2 ;
         RECT 4.690 4.280 176.210 184.125 ;
         RECT 4.690 4.000 44.890 4.280 ;

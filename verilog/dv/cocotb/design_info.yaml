@@ -1,7 +1,7 @@
 CARAVEL_ROOT: /home/cykuan/chinyi2/8bit_vedic_multiplier_signed_unsigned/caravel
 MCW_ROOT: /home/cykuan/chinyi2/8bit_vedic_multiplier_signed_unsigned/mgmt_core_wrapper
 PDK: sky130A
-PDK_ROOT: /home/cykuan/pdk
+PDK_ROOT: /home/cykuan/unic-cass/pdks
 USER_PROJECT_ROOT: /home/cykuan/chinyi2/8bit_vedic_multiplier_signed_unsigned
 caravan: false
 clk: 25

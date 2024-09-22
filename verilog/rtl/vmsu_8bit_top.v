@@ -42,7 +42,7 @@ dff FB7 (.d(b[7]), .clk(clk), .rst(rst), .q(q_b[7]));
 dff FC (.d(control), .clk(clk), .rst(rst), .q(q_control));
 
 //combi logic
-vmsu_8bit M0 (.a(q_a), .b(q_b), .control(q_control), .p(d_p));
+vmsu_8bit M0 (.a(q_a), .b(q_b), .control(q_control), .clk(clk), .rst(rst), .p(d_p));
 
 //output flop
 dff FP0 (.d(d_p[0]), .clk(clk), .rst(rst), .q(p[0]));
@@ -70,6 +70,8 @@ module vmsu_8bit (
 	input [7:0] a,
 	input [7:0] b,
 	input control,
+	input clk,
+	input rst,
 	output [15:0] p
 );
 
@@ -77,6 +79,9 @@ wire [7:0] a_com;
 wire [7:0] b_com;
 wire [7:0] mux_a;
 wire [7:0] mux_b;
+wire [7:0] q_mux_a;
+wire [7:0] q_mux_b;
+wire [15:0] d_out_multi;
 wire [15:0] out_multi;
 wire [15:0] out_multi_com;
 wire c1,c2,c3;
@@ -105,7 +110,44 @@ mux2to1 MUXB5 (.a(b[5]), .b(b_com[5]), .sel(c2), .out(mux_b[5]));
 mux2to1 MUXB6 (.a(b[6]), .b(b_com[6]), .sel(c2), .out(mux_b[6]));
 mux2to1 MUXB7 (.a(b[7]), .b(b_com[7]), .sel(c2), .out(mux_b[7]));
 
-multiplier_8bit MULTIPLY (.a(mux_a), .b(mux_b), .p(out_multi));
+//Pipelining
+dff FAM0 (.d(mux_a[0]), .clk(clk), .rst(rst), .q(q_mux_a[0]));
+dff FAM1 (.d(mux_a[1]), .clk(clk), .rst(rst), .q(q_mux_a[1]));
+dff FAM2 (.d(mux_a[2]), .clk(clk), .rst(rst), .q(q_mux_a[2]));
+dff FAM3 (.d(mux_a[3]), .clk(clk), .rst(rst), .q(q_mux_a[3]));
+dff FAM4 (.d(mux_a[4]), .clk(clk), .rst(rst), .q(q_mux_a[4]));
+dff FAM5 (.d(mux_a[5]), .clk(clk), .rst(rst), .q(q_mux_a[5]));
+dff FAM6 (.d(mux_a[6]), .clk(clk), .rst(rst), .q(q_mux_a[6]));
+dff FAM7 (.d(mux_a[7]), .clk(clk), .rst(rst), .q(q_mux_a[7]));
+
+dff FBM0 (.d(mux_b[0]), .clk(clk), .rst(rst), .q(q_mux_b[0]));
+dff FBM1 (.d(mux_b[1]), .clk(clk), .rst(rst), .q(q_mux_b[1]));
+dff FBM2 (.d(mux_b[2]), .clk(clk), .rst(rst), .q(q_mux_b[2]));
+dff FBM3 (.d(mux_b[3]), .clk(clk), .rst(rst), .q(q_mux_b[3]));
+dff FBM4 (.d(mux_b[4]), .clk(clk), .rst(rst), .q(q_mux_b[4]));
+dff FBM5 (.d(mux_b[5]), .clk(clk), .rst(rst), .q(q_mux_b[5]));
+dff FBM6 (.d(mux_b[6]), .clk(clk), .rst(rst), .q(q_mux_b[6]));
+dff FBM7 (.d(mux_b[7]), .clk(clk), .rst(rst), .q(q_mux_b[7]));
+
+multiplier_8bit MULTIPLY (.a(q_mux_a), .b(q_mux_b), .p(d_out_multi));
+
+//Pipelining
+dff FPM0 (.d(d_out_multi[0]), .clk(clk), .rst(rst), .q(out_multi[0]));
+dff FPM1 (.d(d_out_multi[1]), .clk(clk), .rst(rst), .q(out_multi[1]));
+dff FPM2 (.d(d_out_multi[2]), .clk(clk), .rst(rst), .q(out_multi[2]));
+dff FPM3 (.d(d_out_multi[3]), .clk(clk), .rst(rst), .q(out_multi[3]));
+dff FPM4 (.d(d_out_multi[4]), .clk(clk), .rst(rst), .q(out_multi[4]));
+dff FPM5 (.d(d_out_multi[5]), .clk(clk), .rst(rst), .q(out_multi[5]));
+dff FPM6 (.d(d_out_multi[6]), .clk(clk), .rst(rst), .q(out_multi[6]));
+dff FPM7 (.d(d_out_multi[7]), .clk(clk), .rst(rst), .q(out_multi[7]));
+dff FPM8 (.d(d_out_multi[8]), .clk(clk), .rst(rst), .q(out_multi[8]));
+dff FPM9 (.d(d_out_multi[9]), .clk(clk), .rst(rst), .q(out_multi[9]));
+dff FPM10 (.d(d_out_multi[10]), .clk(clk), .rst(rst), .q(out_multi[10]));
+dff FPM11 (.d(d_out_multi[11]), .clk(clk), .rst(rst), .q(out_multi[11]));
+dff FPM12 (.d(d_out_multi[12]), .clk(clk), .rst(rst), .q(out_multi[12]));
+dff FPM13 (.d(d_out_multi[13]), .clk(clk), .rst(rst), .q(out_multi[13]));
+dff FPM14 (.d(d_out_multi[14]), .clk(clk), .rst(rst), .q(out_multi[14]));
+dff FPM15 (.d(d_out_multi[15]), .clk(clk), .rst(rst), .q(out_multi[15]));
 
 complementary_16bit COMMULTI (.a(out_multi), .c(out_multi_com));
 

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1726929112
+timestamp 1726995145
 << obsli1 >>
 rect 155304 5759 189436 40065
 << obsm1 >>
@@ -3062,8 +3062,8 @@ port 645 nsew signal input
 string FIXED_BBOX 0 0 584000 704000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 3035528
-string GDS_FILE /home/cykuan/chinyi2/8bit_vedic_multiplier_signed_unsigned/openlane/user_project_wrapper/runs/24_09_21_22_30/results/signoff/user_project_wrapper.magic.gds
-string GDS_START 1987196
+string GDS_END 3627108
+string GDS_FILE /home/cykuan/chinyi2/8bit_vedic_multiplier_signed_unsigned/openlane/user_project_wrapper/runs/24_09_22_16_51/results/signoff/user_project_wrapper.magic.gds
+string GDS_START 2578776
 << end >>
 

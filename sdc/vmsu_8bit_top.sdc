@@ -1,6 +1,6 @@
 ###############################################################################
 # Created by write_sdc
-# Sat Sep 21 13:38:56 2024
+# Sun Sep 22 08:35:46 2024
 ###############################################################################
 current_design vmsu_8bit_top
 ###############################################################################
@@ -8,8 +8,8 @@ current_design vmsu_8bit_top
 ###############################################################################
 create_clock -name clk -period 25.0000 
 set_clock_uncertainty 0.2500 clk
-set_clock_latency -source -min 4.6500 [get_clocks {clk}]
-set_clock_latency -source -max 5.5700 [get_clocks {clk}]
+set_clock_latency -source -min 4.9000 [get_clocks {clk}]
+set_clock_latency -source -max 5.0000 [get_clocks {clk}]
 ###############################################################################
 # Environment
 ###############################################################################
@@ -34,5 +34,5 @@ set_timing_derate -late 1.0500
 ###############################################################################
 # Design Rules
 ###############################################################################
-set_max_transition 0.7500 [current_design]
-set_max_fanout 70.0000 [current_design]
+set_max_transition 1.0000 [current_design]
+set_max_fanout 150.0000 [current_design]
