@@ -85,30 +85,33 @@ wire [15:0] d_out_multi;
 wire [15:0] out_multi;
 wire [15:0] out_multi_com;
 wire c1,c2,c3;
+wire d1_c1,d1_c2;
+wire q1_c1,q1_c2;
+wire d2_c1,d2_c2;
 
 complementary_8bit COMA (.a(a), .c(a_com));
 complementary_8bit COMB (.a(b), .c(b_com));
 
-and (c1, control, a[7]);
-and (c2, control, b[7]);
+and (d1_c1, control, a[7]);
+and (d1_c2, control, b[7]);
 
-mux2to1 MUXA0 (.a(a[0]), .b(a_com[0]), .sel(c1), .out(mux_a[0]));
-mux2to1 MUXA1 (.a(a[1]), .b(a_com[1]), .sel(c1), .out(mux_a[1]));
-mux2to1 MUXA2 (.a(a[2]), .b(a_com[2]), .sel(c1), .out(mux_a[2]));
-mux2to1 MUXA3 (.a(a[3]), .b(a_com[3]), .sel(c1), .out(mux_a[3]));
-mux2to1 MUXA4 (.a(a[4]), .b(a_com[4]), .sel(c1), .out(mux_a[4]));
-mux2to1 MUXA5 (.a(a[5]), .b(a_com[5]), .sel(c1), .out(mux_a[5]));
-mux2to1 MUXA6 (.a(a[6]), .b(a_com[6]), .sel(c1), .out(mux_a[6]));
-mux2to1 MUXA7 (.a(a[7]), .b(a_com[7]), .sel(c1), .out(mux_a[7]));
+mux2to1 MUXA0 (.a(a[0]), .b(a_com[0]), .sel(d1_c1), .out(mux_a[0]));
+mux2to1 MUXA1 (.a(a[1]), .b(a_com[1]), .sel(d1_c1), .out(mux_a[1]));
+mux2to1 MUXA2 (.a(a[2]), .b(a_com[2]), .sel(d1_c1), .out(mux_a[2]));
+mux2to1 MUXA3 (.a(a[3]), .b(a_com[3]), .sel(d1_c1), .out(mux_a[3]));
+mux2to1 MUXA4 (.a(a[4]), .b(a_com[4]), .sel(d1_c1), .out(mux_a[4]));
+mux2to1 MUXA5 (.a(a[5]), .b(a_com[5]), .sel(d1_c1), .out(mux_a[5]));
+mux2to1 MUXA6 (.a(a[6]), .b(a_com[6]), .sel(d1_c1), .out(mux_a[6]));
+mux2to1 MUXA7 (.a(a[7]), .b(a_com[7]), .sel(d1_c1), .out(mux_a[7]));
 
-mux2to1 MUXB0 (.a(b[0]), .b(b_com[0]), .sel(c2), .out(mux_b[0]));
-mux2to1 MUXB1 (.a(b[1]), .b(b_com[1]), .sel(c2), .out(mux_b[1]));
-mux2to1 MUXB2 (.a(b[2]), .b(b_com[2]), .sel(c2), .out(mux_b[2]));
-mux2to1 MUXB3 (.a(b[3]), .b(b_com[3]), .sel(c2), .out(mux_b[3]));
-mux2to1 MUXB4 (.a(b[4]), .b(b_com[4]), .sel(c2), .out(mux_b[4]));
-mux2to1 MUXB5 (.a(b[5]), .b(b_com[5]), .sel(c2), .out(mux_b[5]));
-mux2to1 MUXB6 (.a(b[6]), .b(b_com[6]), .sel(c2), .out(mux_b[6]));
-mux2to1 MUXB7 (.a(b[7]), .b(b_com[7]), .sel(c2), .out(mux_b[7]));
+mux2to1 MUXB0 (.a(b[0]), .b(b_com[0]), .sel(d1_c2), .out(mux_b[0]));
+mux2to1 MUXB1 (.a(b[1]), .b(b_com[1]), .sel(d1_c2), .out(mux_b[1]));
+mux2to1 MUXB2 (.a(b[2]), .b(b_com[2]), .sel(d1_c2), .out(mux_b[2]));
+mux2to1 MUXB3 (.a(b[3]), .b(b_com[3]), .sel(d1_c2), .out(mux_b[3]));
+mux2to1 MUXB4 (.a(b[4]), .b(b_com[4]), .sel(d1_c2), .out(mux_b[4]));
+mux2to1 MUXB5 (.a(b[5]), .b(b_com[5]), .sel(d1_c2), .out(mux_b[5]));
+mux2to1 MUXB6 (.a(b[6]), .b(b_com[6]), .sel(d1_c2), .out(mux_b[6]));
+mux2to1 MUXB7 (.a(b[7]), .b(b_com[7]), .sel(d1_c2), .out(mux_b[7]));
 
 //Pipelining
 dff FAM0 (.d(mux_a[0]), .clk(clk), .rst(rst), .q(q_mux_a[0]));
@@ -129,7 +132,13 @@ dff FBM5 (.d(mux_b[5]), .clk(clk), .rst(rst), .q(q_mux_b[5]));
 dff FBM6 (.d(mux_b[6]), .clk(clk), .rst(rst), .q(q_mux_b[6]));
 dff FBM7 (.d(mux_b[7]), .clk(clk), .rst(rst), .q(q_mux_b[7]));
 
+dff FCM1 (.d(d1_c1), .clk(clk), .rst(rst), .q(q1_c1));
+dff FCM2 (.d(d1_c2), .clk(clk), .rst(rst), .q(q1_c2));
+
+
 multiplier_8bit MULTIPLY (.a(q_mux_a), .b(q_mux_b), .p(d_out_multi));
+buf (d2_c1,q1_c1);
+buf (d2_c2,q1_c2);
 
 //Pipelining
 dff FPM0 (.d(d_out_multi[0]), .clk(clk), .rst(rst), .q(out_multi[0]));
@@ -148,6 +157,9 @@ dff FPM12 (.d(d_out_multi[12]), .clk(clk), .rst(rst), .q(out_multi[12]));
 dff FPM13 (.d(d_out_multi[13]), .clk(clk), .rst(rst), .q(out_multi[13]));
 dff FPM14 (.d(d_out_multi[14]), .clk(clk), .rst(rst), .q(out_multi[14]));
 dff FPM15 (.d(d_out_multi[15]), .clk(clk), .rst(rst), .q(out_multi[15]));
+
+dff FCM3 (.d(d2_c1), .clk(clk), .rst(rst), .q(c1));
+dff FCM4 (.d(d2_c2), .clk(clk), .rst(rst), .q(c2));
 
 complementary_16bit COMMULTI (.a(out_multi), .c(out_multi_com));
 

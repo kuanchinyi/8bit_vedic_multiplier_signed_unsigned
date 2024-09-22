@@ -418,6 +418,8 @@ MACRO vmsu_8bit_top
         RECT 3.990 14.600 177.600 16.000 ;
         RECT 3.990 10.560 178.000 14.600 ;
         RECT 4.400 9.695 178.000 10.560 ;
+      LAYER met4 ;
+        RECT 26.975 75.655 27.305 103.865 ;
   END
 END vmsu_8bit_top
 END LIBRARY
