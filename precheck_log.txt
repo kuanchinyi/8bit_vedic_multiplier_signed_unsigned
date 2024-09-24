@@ -1,0 +1,469 @@
+[09/22/24 06:39:40 PDT] SUBMITTED
+
+
+
+
+
+
+[09/22/24 06:44:31 PDT] STARTED
+
+
+
+
+
+
+[09/22/24 06:44:34 PDT] PROJECT GIT INFO
+Repository: https:/repositories.efabless.com/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git | Branch: main | Commit: 54d70004a6141421aa1da5bb14c222cef669ad6a
+
+
+
+
+
+
+[09/22/24 06:44:34 PDT] EXTRACTING FILES
+Extracting compressed files in: UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git
+
+
+
+
+
+
+[09/22/24 06:44:34 PDT] PROJECT TYPE INFO
+digital
+
+
+
+
+
+
+[09/22/24 06:44:34 PDT] PROJECT GDS INFO
+user_project_wrapper: cbbc630096fda0c5391df45313dcb3a1f710e749
+
+
+
+
+
+
+[09/22/24 06:44:34 PDT] TOOLS INFO
+KLayout: v0.29.2 | Magic: v8.3.471
+
+
+
+
+
+
+[09/22/24 06:44:34 PDT] PDKS INFO
+SKY130A: None | Open PDKs: 0fe599b2afb6708d281543108caf8310912f54af
+
+
+
+
+
+
+[09/22/24 06:44:34 PDT] START
+Precheck Started, the full log 'precheck.log' will be located in '/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs'
+
+
+
+
+
+
+[09/22/24 06:44:35 PDT] PRECHECK SEQUENCE
+Precheck will run the following checks: [Makefile, Top Cell Check, Consistency, GPIO-Defines, XOR, Magic DRC, Klayout FEOL, Klayout BEOL, Klayout Offgrid, Klayout Metal Minimum Clear Area Density, Klayout Pin Label Purposes Overlapping Drawing, Klayout ZeroArea, Spike Check, Illegal Cellname Check, OEB, LVS]
+
+
+
+
+
+
+[09/22/24 06:44:35 PDT] STEP UPDATE
+Executing Check 1 of 16: Makefile
+
+
+
+
+
+
+[09/22/24 06:44:35 PDT] MAKEFILE CHECK PASSED
+Makefile valid.
+
+
+
+
+
+
+[09/22/24 06:44:35 PDT] STEP UPDATE
+Executing Check 2 of 16: Top Cell Check
+
+
+
+
+
+
+[09/22/24 06:44:35 PDT] TOP CELL CHECK CHECK PASSED
+The GDS file, user_project_wrapper.gds, has exactly 1 topcell.
+
+
+
+
+
+
+[09/22/24 06:44:35 PDT] STEP UPDATE
+Executing Check 3 of 16: Consistency
+
+
+
+
+
+
+[09/22/24 06:44:38 PDT] NETLIST CONSISTENCY CHECK PASSED
+user_project_wrapper netlist passed all consistency checks.
+
+
+
+
+
+
+[09/22/24 06:44:38 PDT] CONSISTENCY CHECK PASSED
+The user netlist and the top netlist are valid.
+
+
+
+
+
+
+[09/22/24 06:44:38 PDT] STEP UPDATE
+Executing Check 4 of 16: GPIO-Defines
+
+
+
+
+
+
+[09/22/24 06:44:40 PDT] GPIO-DEFINES CHECK PASSED
+The user verilog/rtl/user_defines.v is valid.
+
+
+
+
+
+
+[09/22/24 06:44:40 PDT] STEP UPDATE
+Executing Check 5 of 16: XOR
+
+
+
+
+
+
+[09/22/24 06:44:44 PDT] XOR CHECK UPDATE
+Total XOR differences: 0, for more details view /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/user_project_wrapper.xor.gds
+
+
+
+
+
+
+[09/22/24 06:44:44 PDT] XOR CHECK PASSED
+The GDS file has no XOR violations.
+
+
+
+
+
+
+[09/22/24 06:44:44 PDT] STEP UPDATE
+Executing Check 6 of 16: Magic DRC
+
+
+
+
+
+
+[09/22/24 06:44:50 PDT] MAGIC DRC CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no DRC violations.
+
+
+
+
+
+
+[09/22/24 06:44:50 PDT] STEP UPDATE
+Executing Check 7 of 16: Klayout FEOL
+
+
+
+
+
+
+[09/22/24 06:44:55 PDT] KLAYOUT FEOL CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no DRC violations.
+
+
+
+
+
+
+[09/22/24 06:44:55 PDT] STEP UPDATE
+Executing Check 8 of 16: Klayout BEOL
+
+
+
+
+
+
+[09/22/24 06:45:04 PDT] KLAYOUT BEOL CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no DRC violations.
+
+
+
+
+
+
+[09/22/24 06:45:04 PDT] STEP UPDATE
+Executing Check 9 of 16: Klayout Offgrid
+
+
+
+
+
+
+[09/22/24 06:45:08 PDT] KLAYOUT OFFGRID CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no DRC violations.
+
+
+
+
+
+
+[09/22/24 06:45:08 PDT] STEP UPDATE
+Executing Check 10 of 16: Klayout Metal Minimum Clear Area Density
+
+
+
+
+
+
+[09/22/24 06:45:10 PDT] KLAYOUT METAL MINIMUM CLEAR AREA DENSITY CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no DRC violations.
+
+
+
+
+
+
+[09/22/24 06:45:10 PDT] STEP UPDATE
+Executing Check 11 of 16: Klayout Pin Label Purposes Overlapping Drawing
+
+
+
+
+
+
+[09/22/24 06:45:12 PDT] KLAYOUT PIN LABEL PURPOSES OVERLAPPING DRAWING CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no DRC violations.
+
+
+
+
+
+
+[09/22/24 06:45:13 PDT] STEP UPDATE
+Executing Check 12 of 16: Klayout ZeroArea
+
+
+
+
+
+
+[09/22/24 06:45:14 PDT] KLAYOUT ZEROAREA CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no DRC violations.
+
+
+
+
+
+
+[09/22/24 06:45:14 PDT] STEP UPDATE
+Executing Check 13 of 16: Spike Check
+
+
+
+
+
+
+[09/22/24 06:45:16 PDT] SPIKE CHECK CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no spike errors.
+
+
+
+
+
+
+[09/22/24 06:45:17 PDT] STEP UPDATE
+Executing Check 14 of 16: Illegal Cellname Check
+
+
+
+
+
+
+[09/22/24 06:45:17 PDT] ILLEGAL CELLNAME CHECK CHECK PASSED
+The GDS file, user_project_wrapper.gds, has no Illegal Cellnames errors.
+
+
+
+
+
+
+[09/22/24 06:45:17 PDT] STEP UPDATE
+Executing Check 15 of 16: OEB
+
+
+
+
+
+
+[09/22/24 06:45:31 PDT] OEB CHECK PASSED
+The design, user_project_wrapper, has no OEB violations.
+
+
+
+
+
+
+[09/22/24 06:45:31 PDT] STEP UPDATE
+Executing Check 16 of 16: LVS
+
+
+
+
+
+
+[09/22/24 06:45:48 PDT] LVS CHECK PASSED
+The design, user_project_wrapper, has no LVS violations.
+
+
+
+
+
+
+[09/22/24 06:45:48 PDT] FINISH
+Executing Finished, the full log 'precheck.log' can be found in '/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs'
+
+
+
+
+
+
+[09/22/24 06:45:48 PDT] SUCCESS
+All Checks Passed !!!
+
+
+
+
+
+
+[09/22/24 06:45:48 PDT] SUCCEEDED
+STDOUT: Loading Job # e41911b3-49db-4339-94e8-dab1ab78befe ...
+STDOUT: Commercial Shuttle MPW Precheck | Starting Job # e41911b3-49db-4339-94e8-dab1ab78befe ...
+STDOUT: {{Project Git Info}} Repository: https:/repositories.efabless.com/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git | Branch: main | Commit: 54d70004a6141421aa1da5bb14c222cef669ad6a
+STDOUT: {{EXTRACTING FILES}} Extracting compressed files in: UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git
+STDOUT: {{Project Type Info}} digital
+STDOUT: {{Project GDS Info}} user_project_wrapper: cbbc630096fda0c5391df45313dcb3a1f710e749
+STDOUT: {{Tools Info}} KLayout: v0.29.2 | Magic: v8.3.471
+STDOUT: {{PDKs Info}} SKY130A: None | Open PDKs: 0fe599b2afb6708d281543108caf8310912f54af
+STDOUT: {{START}} Precheck Started, the full log 'precheck.log' will be located in '/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs'
+STDOUT: {{PRECHECK SEQUENCE}} Precheck will run the following checks: [Makefile, Top Cell Check, Consistency, GPIO-Defines, XOR, Magic DRC, Klayout FEOL, Klayout BEOL, Klayout Offgrid, Klayout Metal Minimum Clear Area Density, Klayout Pin Label Purposes Overlapping Drawing, Klayout ZeroArea, Spike Check, Illegal Cellname Check, OEB, LVS]
+STDOUT: {{STEP UPDATE}} Executing Check 1 of 16: Makefile
+STDOUT: {{MAKEFILE CHECK PASSED}} Makefile valid.
+STDOUT: {{STEP UPDATE}} Executing Check 2 of 16: Top Cell Check
+STDOUT: Success: Single top cell 'user_project_wrapper' found in the GDS layout.
+STDOUT: {{Top Cell Check CHECK PASSED}} The GDS file, user_project_wrapper.gds, has exactly 1 topcell.
+STDOUT: {{STEP UPDATE}} Executing Check 3 of 16: Consistency
+STDOUT: PORTS CHECK PASSED: Netlist user_project_wrapper ports match the golden wrapper ports
+STDOUT: COMPLEXITY CHECK PASSED: Netlist user_project_wrapper contains at least 1 instances (1 instances).
+STDOUT: MODELING CHECK PASSED: Netlist user_project_wrapper is structural.
+STDOUT: LAYOUT CHECK PASSED: The GDS layout for user_project_wrapper matches the provided structural netlist.
+STDOUT: POWER CONNECTIONS CHECK PASSED: All instances in user_project_wrapper are connected to power
+STDOUT: PORT TYPES CHECK PASSED: Netlist user_project_wrapper port types match the golden wrapper port types.
+STDOUT: {{NETLIST CONSISTENCY CHECK PASSED}} user_project_wrapper netlist passed all consistency checks.
+STDOUT: {{CONSISTENCY CHECK PASSED}} The user netlist and the top netlist are valid.
+STDOUT: {{STEP UPDATE}} Executing Check 4 of 16: GPIO-Defines
+STDOUT: GPIO-DEFINES: Checking verilog/rtl/user_defines.v, parsing files: ['/opt/checks/gpio_defines_check/verilog_assets/gpio_modes_base.v', 'UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/verilog/rtl/user_defines.v', '/opt/checks/gpio_defines_check/verilog_assets/gpio_modes_observe.v']
+STDERR: Generating LALR tables
+STDERR: WARNING: 183 shift/reduce conflicts
+STDOUT: GPIO-DEFINES report path: /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/gpio_defines.report
+STDOUT: {{GPIO-DEFINES CHECK PASSED}} The user verilog/rtl/user_defines.v is valid.
+STDOUT: {{STEP UPDATE}} Executing Check 5 of 16: XOR
+STDOUT: {{XOR CHECK UPDATE}} Total XOR differences: 0, for more details view /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/user_project_wrapper.xor.gds
+STDOUT: {{XOR CHECK PASSED}} The GDS file has no XOR violations.
+STDOUT: {{STEP UPDATE}} Executing Check 6 of 16: Magic DRC
+STDOUT: Found 0 violations
+STDOUT: 0 DRC violations
+STDOUT: {{MAGIC DRC CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+STDOUT: {{STEP UPDATE}} Executing Check 7 of 16: Klayout FEOL
+STDOUT: in CUSTOM klayout_gds_drc_check
+STDOUT: run: klayout -b -r /opt/checks/tech-files/sky130A_mr.drc -rd input=UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/klayout_feol_check.xml -rd thr=8 -rd feol=true >& /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/klayout_feol_check.log
+STDOUT: No DRC Violations found
+STDOUT: {{Klayout FEOL CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+STDOUT: {{STEP UPDATE}} Executing Check 8 of 16: Klayout BEOL
+STDOUT: in CUSTOM klayout_gds_drc_check
+STDOUT: run: klayout -b -r /opt/checks/tech-files/sky130A_mr.drc -rd input=UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/klayout_beol_check.xml -rd thr=8 -rd beol=true >& /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/klayout_beol_check.log
+STDOUT: No DRC Violations found
+STDOUT: {{Klayout BEOL CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+STDOUT: {{STEP UPDATE}} Executing Check 9 of 16: Klayout Offgrid
+STDOUT: in CUSTOM klayout_gds_drc_check
+STDOUT: run: klayout -b -r /opt/checks/tech-files/sky130A_mr.drc -rd input=UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/klayout_offgrid_check.xml -rd thr=8 -rd offgrid=true >& /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/klayout_offgrid_check.log
+STDOUT: No DRC Violations found
+STDOUT: {{Klayout Offgrid CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+STDOUT: {{STEP UPDATE}} Executing Check 10 of 16: Klayout Metal Minimum Clear Area Density
+STDOUT: in CUSTOM klayout_gds_drc_check
+STDOUT: run: klayout -b -r /opt/checks/drc_checks/klayout/met_min_ca_density.lydrc -rd input=UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/klayout_met_min_ca_density_check.xml -rd thr=8 >& /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/klayout_met_min_ca_density_check.log
+STDOUT: No DRC Violations found
+STDOUT: {{Klayout Metal Minimum Clear Area Density CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+STDOUT: {{STEP UPDATE}} Executing Check 11 of 16: Klayout Pin Label Purposes Overlapping Drawing
+STDOUT: in CUSTOM klayout_gds_drc_check
+STDOUT: run: klayout -b -r /opt/checks/drc_checks/klayout/pin_label_purposes_overlapping_drawing.rb.drc -rd input=UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/klayout_pin_label_purposes_overlapping_drawing_check.xml -rd thr=8 -rd top_cell_name=user_project_wrapper >& /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/klayout_pin_label_purposes_overlapping_drawing_check.log
+STDOUT: No DRC Violations found
+STDOUT: {{Klayout Pin Label Purposes Overlapping Drawing CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+STDOUT: {{STEP UPDATE}} Executing Check 12 of 16: Klayout ZeroArea
+STDOUT: in CUSTOM klayout_gds_drc_check
+STDOUT: run: klayout -b -r /opt/checks/drc_checks/klayout/zeroarea.rb.drc -rd input=UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/klayout_zeroarea_check.xml -rd thr=8 -rd cleaned_output=/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/user_project_wrapper_no_zero_areas.gds >& /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/klayout_zeroarea_check.log
+STDOUT: No DRC Violations found
+STDOUT: {{Klayout ZeroArea CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+STDOUT: {{STEP UPDATE}} Executing Check 13 of 16: Spike Check
+STDOUT: run: bash /opt/checks/spike_check/gdsArea0 -V -m /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/outputs/reports/spike_check.xml UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds >& /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/spike_check.log
+STDOUT: No Spikes found
+STDOUT: {{Spike Check CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no spike errors.
+STDOUT: {{STEP UPDATE}} Executing Check 14 of 16: Illegal Cellname Check
+STDOUT: {{Illegal Cellname Check CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no Illegal Cellnames errors.
+STDOUT: {{STEP UPDATE}} Executing Check 15 of 16: OEB
+STDOUT: Loading LVS environment from UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/lvs/user_project_wrapper/lvs_config.json
+STDOUT: EXTRACT_FLATGLOB :
+STDOUT: EXTRACT_ABSTRACT : *__fill_* *__fakediode_* *__tapvpwrvgnd_*
+STDOUT: LVS_FLATTEN :
+STDOUT: LVS_NOFLATTEN :
+STDOUT: LVS_IGNORE :
+STDOUT: LVS_SPICE_FILES : /opt/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice /opt/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+STDOUT: LVS_VERILOG_FILES : UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/verilog/gl/vmsu_8bit_top.v UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/verilog/gl/user_project_wrapper.v
+STDOUT: LAYOUT_FILE : UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds
+STDOUT: run: run_oeb_check
+STDOUT: OEB output directory: /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe
+STDOUT: {{OEB CHECK PASSED}} The design, user_project_wrapper, has no OEB violations.
+STDOUT: {{STEP UPDATE}} Executing Check 16 of 16: LVS
+STDOUT: Loading LVS environment from UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/lvs/user_project_wrapper/lvs_config.json
+STDOUT: EXTRACT_FLATGLOB :
+STDOUT: EXTRACT_ABSTRACT : *__fill_* *__fakediode_* *__tapvpwrvgnd_*
+STDOUT: LVS_FLATTEN :
+STDOUT: LVS_NOFLATTEN :
+STDOUT: LVS_IGNORE :
+STDOUT: LVS_SPICE_FILES : /opt/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice /opt/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+STDOUT: LVS_VERILOG_FILES : UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/verilog/gl/vmsu_8bit_top.v UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/verilog/gl/user_project_wrapper.v
+STDOUT: LAYOUT_FILE : UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned.git/gds/user_project_wrapper.gds
+STDOUT: run: run_be_checks
+STDOUT: LVS output directory: /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe
+STDOUT: WARNING ERC CHECK FAILED, stat=4, see /mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs/LVS_check.log
+STDOUT: {{LVS CHECK PASSED}} The design, user_project_wrapper, has no LVS violations.
+STDOUT: {{FINISH}} Executing Finished, the full log 'precheck.log' can be found in '/mnt/users_data/jobs/kuanchinyi/UNIC-CASS-24-8bit_vedic_multiplier_signed_unsigned/e41911b3-49db-4339-94e8-dab1ab78befe/logs'
+STDOUT: {{SUCCESS}} All Checks Passed !!!
