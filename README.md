@@ -21,7 +21,7 @@ The design can be easily scaled to accommodate different bit-widths, such as 4-b
 | :---------------------------- | :--------: |
 | Inputs                        | 19         |
 | Outputs                       | 16         |
-| Estimate Core Area (mm^2)     | 0.03533    |
+| Estimate Core Area (mm^2)     | 0.035308    |
 
 ==================================================
 
