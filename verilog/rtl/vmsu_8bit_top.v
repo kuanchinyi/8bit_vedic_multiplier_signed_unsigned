@@ -21,52 +21,52 @@ wire q_control;
 wire [15:0] d_p;
 
 //input flop
-dff FA0 (.d(a[0]), .clk(clk), .rst(rst), .q(q_a[0]));
-dff FA1 (.d(a[1]), .clk(clk), .rst(rst), .q(q_a[1]));
-dff FA2 (.d(a[2]), .clk(clk), .rst(rst), .q(q_a[2]));
-dff FA3 (.d(a[3]), .clk(clk), .rst(rst), .q(q_a[3]));
-dff FA4 (.d(a[4]), .clk(clk), .rst(rst), .q(q_a[4]));
-dff FA5 (.d(a[5]), .clk(clk), .rst(rst), .q(q_a[5]));
-dff FA6 (.d(a[6]), .clk(clk), .rst(rst), .q(q_a[6]));
-dff FA7 (.d(a[7]), .clk(clk), .rst(rst), .q(q_a[7]));
+vmsu8_dff FA0 (.d(a[0]), .clk(clk), .rst(rst), .q(q_a[0]));
+vmsu8_dff FA1 (.d(a[1]), .clk(clk), .rst(rst), .q(q_a[1]));
+vmsu8_dff FA2 (.d(a[2]), .clk(clk), .rst(rst), .q(q_a[2]));
+vmsu8_dff FA3 (.d(a[3]), .clk(clk), .rst(rst), .q(q_a[3]));
+vmsu8_dff FA4 (.d(a[4]), .clk(clk), .rst(rst), .q(q_a[4]));
+vmsu8_dff FA5 (.d(a[5]), .clk(clk), .rst(rst), .q(q_a[5]));
+vmsu8_dff FA6 (.d(a[6]), .clk(clk), .rst(rst), .q(q_a[6]));
+vmsu8_dff FA7 (.d(a[7]), .clk(clk), .rst(rst), .q(q_a[7]));
 
-dff FB0 (.d(b[0]), .clk(clk), .rst(rst), .q(q_b[0]));
-dff FB1 (.d(b[1]), .clk(clk), .rst(rst), .q(q_b[1]));
-dff FB2 (.d(b[2]), .clk(clk), .rst(rst), .q(q_b[2]));
-dff FB3 (.d(b[3]), .clk(clk), .rst(rst), .q(q_b[3]));
-dff FB4 (.d(b[4]), .clk(clk), .rst(rst), .q(q_b[4]));
-dff FB5 (.d(b[5]), .clk(clk), .rst(rst), .q(q_b[5]));
-dff FB6 (.d(b[6]), .clk(clk), .rst(rst), .q(q_b[6]));
-dff FB7 (.d(b[7]), .clk(clk), .rst(rst), .q(q_b[7]));
+vmsu8_dff FB0 (.d(b[0]), .clk(clk), .rst(rst), .q(q_b[0]));
+vmsu8_dff FB1 (.d(b[1]), .clk(clk), .rst(rst), .q(q_b[1]));
+vmsu8_dff FB2 (.d(b[2]), .clk(clk), .rst(rst), .q(q_b[2]));
+vmsu8_dff FB3 (.d(b[3]), .clk(clk), .rst(rst), .q(q_b[3]));
+vmsu8_dff FB4 (.d(b[4]), .clk(clk), .rst(rst), .q(q_b[4]));
+vmsu8_dff FB5 (.d(b[5]), .clk(clk), .rst(rst), .q(q_b[5]));
+vmsu8_dff FB6 (.d(b[6]), .clk(clk), .rst(rst), .q(q_b[6]));
+vmsu8_dff FB7 (.d(b[7]), .clk(clk), .rst(rst), .q(q_b[7]));
 
-dff FC (.d(control), .clk(clk), .rst(rst), .q(q_control));
+vmsu8_dff FC (.d(control), .clk(clk), .rst(rst), .q(q_control));
 
 //combi logic
-vmsu_8bit M0 (.a(q_a), .b(q_b), .control(q_control), .clk(clk), .rst(rst), .p(d_p));
+vmsu8_vmsu_8bit M0 (.a(q_a), .b(q_b), .control(q_control), .clk(clk), .rst(rst), .p(d_p));
 
 //output flop
-dff FP0 (.d(d_p[0]), .clk(clk), .rst(rst), .q(p[0]));
-dff FP1 (.d(d_p[1]), .clk(clk), .rst(rst), .q(p[1]));
-dff FP2 (.d(d_p[2]), .clk(clk), .rst(rst), .q(p[2]));
-dff FP3 (.d(d_p[3]), .clk(clk), .rst(rst), .q(p[3]));
-dff FP4 (.d(d_p[4]), .clk(clk), .rst(rst), .q(p[4]));
-dff FP5 (.d(d_p[5]), .clk(clk), .rst(rst), .q(p[5]));
-dff FP6 (.d(d_p[6]), .clk(clk), .rst(rst), .q(p[6]));
-dff FP7 (.d(d_p[7]), .clk(clk), .rst(rst), .q(p[7]));
-dff FP8 (.d(d_p[8]), .clk(clk), .rst(rst), .q(p[8]));
-dff FP9 (.d(d_p[9]), .clk(clk), .rst(rst), .q(p[9]));
-dff FP10 (.d(d_p[10]), .clk(clk), .rst(rst), .q(p[10]));
-dff FP11 (.d(d_p[11]), .clk(clk), .rst(rst), .q(p[11]));
-dff FP12 (.d(d_p[12]), .clk(clk), .rst(rst), .q(p[12]));
-dff FP13 (.d(d_p[13]), .clk(clk), .rst(rst), .q(p[13]));
-dff FP14 (.d(d_p[14]), .clk(clk), .rst(rst), .q(p[14]));
-dff FP15 (.d(d_p[15]), .clk(clk), .rst(rst), .q(p[15]));
+vmsu8_dff FP0 (.d(d_p[0]), .clk(clk), .rst(rst), .q(p[0]));
+vmsu8_dff FP1 (.d(d_p[1]), .clk(clk), .rst(rst), .q(p[1]));
+vmsu8_dff FP2 (.d(d_p[2]), .clk(clk), .rst(rst), .q(p[2]));
+vmsu8_dff FP3 (.d(d_p[3]), .clk(clk), .rst(rst), .q(p[3]));
+vmsu8_dff FP4 (.d(d_p[4]), .clk(clk), .rst(rst), .q(p[4]));
+vmsu8_dff FP5 (.d(d_p[5]), .clk(clk), .rst(rst), .q(p[5]));
+vmsu8_dff FP6 (.d(d_p[6]), .clk(clk), .rst(rst), .q(p[6]));
+vmsu8_dff FP7 (.d(d_p[7]), .clk(clk), .rst(rst), .q(p[7]));
+vmsu8_dff FP8 (.d(d_p[8]), .clk(clk), .rst(rst), .q(p[8]));
+vmsu8_dff FP9 (.d(d_p[9]), .clk(clk), .rst(rst), .q(p[9]));
+vmsu8_dff FP10 (.d(d_p[10]), .clk(clk), .rst(rst), .q(p[10]));
+vmsu8_dff FP11 (.d(d_p[11]), .clk(clk), .rst(rst), .q(p[11]));
+vmsu8_dff FP12 (.d(d_p[12]), .clk(clk), .rst(rst), .q(p[12]));
+vmsu8_dff FP13 (.d(d_p[13]), .clk(clk), .rst(rst), .q(p[13]));
+vmsu8_dff FP14 (.d(d_p[14]), .clk(clk), .rst(rst), .q(p[14]));
+vmsu8_dff FP15 (.d(d_p[15]), .clk(clk), .rst(rst), .q(p[15]));
 
 endmodule
 
 
 
-module vmsu_8bit (
+module vmsu8_vmsu_8bit (
 	input [7:0] a,
 	input [7:0] b,
 	input control,
@@ -89,104 +89,104 @@ wire d1_c1,d1_c2;
 wire q1_c1,q1_c2;
 wire d2_c1,d2_c2;
 
-complementary_8bit COMA (.a(a), .c(a_com));
-complementary_8bit COMB (.a(b), .c(b_com));
+vmsu8_complementary_8bit COMA (.a(a), .c(a_com));
+vmsu8_complementary_8bit COMB (.a(b), .c(b_com));
 
 and (d1_c1, control, a[7]);
 and (d1_c2, control, b[7]);
 
-mux2to1 MUXA0 (.a(a[0]), .b(a_com[0]), .sel(d1_c1), .out(mux_a[0]));
-mux2to1 MUXA1 (.a(a[1]), .b(a_com[1]), .sel(d1_c1), .out(mux_a[1]));
-mux2to1 MUXA2 (.a(a[2]), .b(a_com[2]), .sel(d1_c1), .out(mux_a[2]));
-mux2to1 MUXA3 (.a(a[3]), .b(a_com[3]), .sel(d1_c1), .out(mux_a[3]));
-mux2to1 MUXA4 (.a(a[4]), .b(a_com[4]), .sel(d1_c1), .out(mux_a[4]));
-mux2to1 MUXA5 (.a(a[5]), .b(a_com[5]), .sel(d1_c1), .out(mux_a[5]));
-mux2to1 MUXA6 (.a(a[6]), .b(a_com[6]), .sel(d1_c1), .out(mux_a[6]));
-mux2to1 MUXA7 (.a(a[7]), .b(a_com[7]), .sel(d1_c1), .out(mux_a[7]));
+vmsu8_mux2to1 MUXA0 (.a(a[0]), .b(a_com[0]), .sel(d1_c1), .out(mux_a[0]));
+vmsu8_mux2to1 MUXA1 (.a(a[1]), .b(a_com[1]), .sel(d1_c1), .out(mux_a[1]));
+vmsu8_mux2to1 MUXA2 (.a(a[2]), .b(a_com[2]), .sel(d1_c1), .out(mux_a[2]));
+vmsu8_mux2to1 MUXA3 (.a(a[3]), .b(a_com[3]), .sel(d1_c1), .out(mux_a[3]));
+vmsu8_mux2to1 MUXA4 (.a(a[4]), .b(a_com[4]), .sel(d1_c1), .out(mux_a[4]));
+vmsu8_mux2to1 MUXA5 (.a(a[5]), .b(a_com[5]), .sel(d1_c1), .out(mux_a[5]));
+vmsu8_mux2to1 MUXA6 (.a(a[6]), .b(a_com[6]), .sel(d1_c1), .out(mux_a[6]));
+vmsu8_mux2to1 MUXA7 (.a(a[7]), .b(a_com[7]), .sel(d1_c1), .out(mux_a[7]));
 
-mux2to1 MUXB0 (.a(b[0]), .b(b_com[0]), .sel(d1_c2), .out(mux_b[0]));
-mux2to1 MUXB1 (.a(b[1]), .b(b_com[1]), .sel(d1_c2), .out(mux_b[1]));
-mux2to1 MUXB2 (.a(b[2]), .b(b_com[2]), .sel(d1_c2), .out(mux_b[2]));
-mux2to1 MUXB3 (.a(b[3]), .b(b_com[3]), .sel(d1_c2), .out(mux_b[3]));
-mux2to1 MUXB4 (.a(b[4]), .b(b_com[4]), .sel(d1_c2), .out(mux_b[4]));
-mux2to1 MUXB5 (.a(b[5]), .b(b_com[5]), .sel(d1_c2), .out(mux_b[5]));
-mux2to1 MUXB6 (.a(b[6]), .b(b_com[6]), .sel(d1_c2), .out(mux_b[6]));
-mux2to1 MUXB7 (.a(b[7]), .b(b_com[7]), .sel(d1_c2), .out(mux_b[7]));
+vmsu8_mux2to1 MUXB0 (.a(b[0]), .b(b_com[0]), .sel(d1_c2), .out(mux_b[0]));
+vmsu8_mux2to1 MUXB1 (.a(b[1]), .b(b_com[1]), .sel(d1_c2), .out(mux_b[1]));
+vmsu8_mux2to1 MUXB2 (.a(b[2]), .b(b_com[2]), .sel(d1_c2), .out(mux_b[2]));
+vmsu8_mux2to1 MUXB3 (.a(b[3]), .b(b_com[3]), .sel(d1_c2), .out(mux_b[3]));
+vmsu8_mux2to1 MUXB4 (.a(b[4]), .b(b_com[4]), .sel(d1_c2), .out(mux_b[4]));
+vmsu8_mux2to1 MUXB5 (.a(b[5]), .b(b_com[5]), .sel(d1_c2), .out(mux_b[5]));
+vmsu8_mux2to1 MUXB6 (.a(b[6]), .b(b_com[6]), .sel(d1_c2), .out(mux_b[6]));
+vmsu8_mux2to1 MUXB7 (.a(b[7]), .b(b_com[7]), .sel(d1_c2), .out(mux_b[7]));
 
 //Pipelining
-dff FAM0 (.d(mux_a[0]), .clk(clk), .rst(rst), .q(q_mux_a[0]));
-dff FAM1 (.d(mux_a[1]), .clk(clk), .rst(rst), .q(q_mux_a[1]));
-dff FAM2 (.d(mux_a[2]), .clk(clk), .rst(rst), .q(q_mux_a[2]));
-dff FAM3 (.d(mux_a[3]), .clk(clk), .rst(rst), .q(q_mux_a[3]));
-dff FAM4 (.d(mux_a[4]), .clk(clk), .rst(rst), .q(q_mux_a[4]));
-dff FAM5 (.d(mux_a[5]), .clk(clk), .rst(rst), .q(q_mux_a[5]));
-dff FAM6 (.d(mux_a[6]), .clk(clk), .rst(rst), .q(q_mux_a[6]));
-dff FAM7 (.d(mux_a[7]), .clk(clk), .rst(rst), .q(q_mux_a[7]));
+vmsu8_dff FAM0 (.d(mux_a[0]), .clk(clk), .rst(rst), .q(q_mux_a[0]));
+vmsu8_dff FAM1 (.d(mux_a[1]), .clk(clk), .rst(rst), .q(q_mux_a[1]));
+vmsu8_dff FAM2 (.d(mux_a[2]), .clk(clk), .rst(rst), .q(q_mux_a[2]));
+vmsu8_dff FAM3 (.d(mux_a[3]), .clk(clk), .rst(rst), .q(q_mux_a[3]));
+vmsu8_dff FAM4 (.d(mux_a[4]), .clk(clk), .rst(rst), .q(q_mux_a[4]));
+vmsu8_dff FAM5 (.d(mux_a[5]), .clk(clk), .rst(rst), .q(q_mux_a[5]));
+vmsu8_dff FAM6 (.d(mux_a[6]), .clk(clk), .rst(rst), .q(q_mux_a[6]));
+vmsu8_dff FAM7 (.d(mux_a[7]), .clk(clk), .rst(rst), .q(q_mux_a[7]));
 
-dff FBM0 (.d(mux_b[0]), .clk(clk), .rst(rst), .q(q_mux_b[0]));
-dff FBM1 (.d(mux_b[1]), .clk(clk), .rst(rst), .q(q_mux_b[1]));
-dff FBM2 (.d(mux_b[2]), .clk(clk), .rst(rst), .q(q_mux_b[2]));
-dff FBM3 (.d(mux_b[3]), .clk(clk), .rst(rst), .q(q_mux_b[3]));
-dff FBM4 (.d(mux_b[4]), .clk(clk), .rst(rst), .q(q_mux_b[4]));
-dff FBM5 (.d(mux_b[5]), .clk(clk), .rst(rst), .q(q_mux_b[5]));
-dff FBM6 (.d(mux_b[6]), .clk(clk), .rst(rst), .q(q_mux_b[6]));
-dff FBM7 (.d(mux_b[7]), .clk(clk), .rst(rst), .q(q_mux_b[7]));
+vmsu8_dff FBM0 (.d(mux_b[0]), .clk(clk), .rst(rst), .q(q_mux_b[0]));
+vmsu8_dff FBM1 (.d(mux_b[1]), .clk(clk), .rst(rst), .q(q_mux_b[1]));
+vmsu8_dff FBM2 (.d(mux_b[2]), .clk(clk), .rst(rst), .q(q_mux_b[2]));
+vmsu8_dff FBM3 (.d(mux_b[3]), .clk(clk), .rst(rst), .q(q_mux_b[3]));
+vmsu8_dff FBM4 (.d(mux_b[4]), .clk(clk), .rst(rst), .q(q_mux_b[4]));
+vmsu8_dff FBM5 (.d(mux_b[5]), .clk(clk), .rst(rst), .q(q_mux_b[5]));
+vmsu8_dff FBM6 (.d(mux_b[6]), .clk(clk), .rst(rst), .q(q_mux_b[6]));
+vmsu8_dff FBM7 (.d(mux_b[7]), .clk(clk), .rst(rst), .q(q_mux_b[7]));
 
-dff FCM1 (.d(d1_c1), .clk(clk), .rst(rst), .q(q1_c1));
-dff FCM2 (.d(d1_c2), .clk(clk), .rst(rst), .q(q1_c2));
+vmsu8_dff FCM1 (.d(d1_c1), .clk(clk), .rst(rst), .q(q1_c1));
+vmsu8_dff FCM2 (.d(d1_c2), .clk(clk), .rst(rst), .q(q1_c2));
 
 
-multiplier_8bit MULTIPLY (.a(q_mux_a), .b(q_mux_b), .p(d_out_multi));
+vmsu8_multiplier_8bit MULTIPLY (.a(q_mux_a), .b(q_mux_b), .p(d_out_multi));
 buf (d2_c1,q1_c1);
 buf (d2_c2,q1_c2);
 
 //Pipelining
-dff FPM0 (.d(d_out_multi[0]), .clk(clk), .rst(rst), .q(out_multi[0]));
-dff FPM1 (.d(d_out_multi[1]), .clk(clk), .rst(rst), .q(out_multi[1]));
-dff FPM2 (.d(d_out_multi[2]), .clk(clk), .rst(rst), .q(out_multi[2]));
-dff FPM3 (.d(d_out_multi[3]), .clk(clk), .rst(rst), .q(out_multi[3]));
-dff FPM4 (.d(d_out_multi[4]), .clk(clk), .rst(rst), .q(out_multi[4]));
-dff FPM5 (.d(d_out_multi[5]), .clk(clk), .rst(rst), .q(out_multi[5]));
-dff FPM6 (.d(d_out_multi[6]), .clk(clk), .rst(rst), .q(out_multi[6]));
-dff FPM7 (.d(d_out_multi[7]), .clk(clk), .rst(rst), .q(out_multi[7]));
-dff FPM8 (.d(d_out_multi[8]), .clk(clk), .rst(rst), .q(out_multi[8]));
-dff FPM9 (.d(d_out_multi[9]), .clk(clk), .rst(rst), .q(out_multi[9]));
-dff FPM10 (.d(d_out_multi[10]), .clk(clk), .rst(rst), .q(out_multi[10]));
-dff FPM11 (.d(d_out_multi[11]), .clk(clk), .rst(rst), .q(out_multi[11]));
-dff FPM12 (.d(d_out_multi[12]), .clk(clk), .rst(rst), .q(out_multi[12]));
-dff FPM13 (.d(d_out_multi[13]), .clk(clk), .rst(rst), .q(out_multi[13]));
-dff FPM14 (.d(d_out_multi[14]), .clk(clk), .rst(rst), .q(out_multi[14]));
-dff FPM15 (.d(d_out_multi[15]), .clk(clk), .rst(rst), .q(out_multi[15]));
+vmsu8_dff FPM0 (.d(d_out_multi[0]), .clk(clk), .rst(rst), .q(out_multi[0]));
+vmsu8_dff FPM1 (.d(d_out_multi[1]), .clk(clk), .rst(rst), .q(out_multi[1]));
+vmsu8_dff FPM2 (.d(d_out_multi[2]), .clk(clk), .rst(rst), .q(out_multi[2]));
+vmsu8_dff FPM3 (.d(d_out_multi[3]), .clk(clk), .rst(rst), .q(out_multi[3]));
+vmsu8_dff FPM4 (.d(d_out_multi[4]), .clk(clk), .rst(rst), .q(out_multi[4]));
+vmsu8_dff FPM5 (.d(d_out_multi[5]), .clk(clk), .rst(rst), .q(out_multi[5]));
+vmsu8_dff FPM6 (.d(d_out_multi[6]), .clk(clk), .rst(rst), .q(out_multi[6]));
+vmsu8_dff FPM7 (.d(d_out_multi[7]), .clk(clk), .rst(rst), .q(out_multi[7]));
+vmsu8_dff FPM8 (.d(d_out_multi[8]), .clk(clk), .rst(rst), .q(out_multi[8]));
+vmsu8_dff FPM9 (.d(d_out_multi[9]), .clk(clk), .rst(rst), .q(out_multi[9]));
+vmsu8_dff FPM10 (.d(d_out_multi[10]), .clk(clk), .rst(rst), .q(out_multi[10]));
+vmsu8_dff FPM11 (.d(d_out_multi[11]), .clk(clk), .rst(rst), .q(out_multi[11]));
+vmsu8_dff FPM12 (.d(d_out_multi[12]), .clk(clk), .rst(rst), .q(out_multi[12]));
+vmsu8_dff FPM13 (.d(d_out_multi[13]), .clk(clk), .rst(rst), .q(out_multi[13]));
+vmsu8_dff FPM14 (.d(d_out_multi[14]), .clk(clk), .rst(rst), .q(out_multi[14]));
+vmsu8_dff FPM15 (.d(d_out_multi[15]), .clk(clk), .rst(rst), .q(out_multi[15]));
 
-dff FCM3 (.d(d2_c1), .clk(clk), .rst(rst), .q(c1));
-dff FCM4 (.d(d2_c2), .clk(clk), .rst(rst), .q(c2));
+vmsu8_dff FCM3 (.d(d2_c1), .clk(clk), .rst(rst), .q(c1));
+vmsu8_dff FCM4 (.d(d2_c2), .clk(clk), .rst(rst), .q(c2));
 
-complementary_16bit COMMULTI (.a(out_multi), .c(out_multi_com));
+vmsu8_complementary_16bit COMMULTI (.a(out_multi), .c(out_multi_com));
 
 xor (c3,c2,c1);
 
-mux2to1 MUXM0 (.a(out_multi[0]), .b(out_multi_com[0]), .sel(c3), .out(p[0]));
-mux2to1 MUXM1 (.a(out_multi[1]), .b(out_multi_com[1]), .sel(c3), .out(p[1]));
-mux2to1 MUXM2 (.a(out_multi[2]), .b(out_multi_com[2]), .sel(c3), .out(p[2]));
-mux2to1 MUXM3 (.a(out_multi[3]), .b(out_multi_com[3]), .sel(c3), .out(p[3]));
-mux2to1 MUXM4 (.a(out_multi[4]), .b(out_multi_com[4]), .sel(c3), .out(p[4]));
-mux2to1 MUXM5 (.a(out_multi[5]), .b(out_multi_com[5]), .sel(c3), .out(p[5]));
-mux2to1 MUXM6 (.a(out_multi[6]), .b(out_multi_com[6]), .sel(c3), .out(p[6]));
-mux2to1 MUXM7 (.a(out_multi[7]), .b(out_multi_com[7]), .sel(c3), .out(p[7]));
-mux2to1 MUXM8 (.a(out_multi[8]), .b(out_multi_com[8]), .sel(c3), .out(p[8]));
-mux2to1 MUXM9 (.a(out_multi[9]), .b(out_multi_com[9]), .sel(c3), .out(p[9]));
-mux2to1 MUXM10 (.a(out_multi[10]), .b(out_multi_com[10]), .sel(c3), .out(p[10]));
-mux2to1 MUXM11 (.a(out_multi[11]), .b(out_multi_com[11]), .sel(c3), .out(p[11]));
-mux2to1 MUXM12 (.a(out_multi[12]), .b(out_multi_com[12]), .sel(c3), .out(p[12]));
-mux2to1 MUXM13 (.a(out_multi[13]), .b(out_multi_com[13]), .sel(c3), .out(p[13]));
-mux2to1 MUXM14 (.a(out_multi[14]), .b(out_multi_com[14]), .sel(c3), .out(p[14]));
-mux2to1 MUXM15 (.a(out_multi[15]), .b(out_multi_com[15]), .sel(c3), .out(p[15]));
+vmsu8_mux2to1 MUXM0 (.a(out_multi[0]), .b(out_multi_com[0]), .sel(c3), .out(p[0]));
+vmsu8_mux2to1 MUXM1 (.a(out_multi[1]), .b(out_multi_com[1]), .sel(c3), .out(p[1]));
+vmsu8_mux2to1 MUXM2 (.a(out_multi[2]), .b(out_multi_com[2]), .sel(c3), .out(p[2]));
+vmsu8_mux2to1 MUXM3 (.a(out_multi[3]), .b(out_multi_com[3]), .sel(c3), .out(p[3]));
+vmsu8_mux2to1 MUXM4 (.a(out_multi[4]), .b(out_multi_com[4]), .sel(c3), .out(p[4]));
+vmsu8_mux2to1 MUXM5 (.a(out_multi[5]), .b(out_multi_com[5]), .sel(c3), .out(p[5]));
+vmsu8_mux2to1 MUXM6 (.a(out_multi[6]), .b(out_multi_com[6]), .sel(c3), .out(p[6]));
+vmsu8_mux2to1 MUXM7 (.a(out_multi[7]), .b(out_multi_com[7]), .sel(c3), .out(p[7]));
+vmsu8_mux2to1 MUXM8 (.a(out_multi[8]), .b(out_multi_com[8]), .sel(c3), .out(p[8]));
+vmsu8_mux2to1 MUXM9 (.a(out_multi[9]), .b(out_multi_com[9]), .sel(c3), .out(p[9]));
+vmsu8_mux2to1 MUXM10 (.a(out_multi[10]), .b(out_multi_com[10]), .sel(c3), .out(p[10]));
+vmsu8_mux2to1 MUXM11 (.a(out_multi[11]), .b(out_multi_com[11]), .sel(c3), .out(p[11]));
+vmsu8_mux2to1 MUXM12 (.a(out_multi[12]), .b(out_multi_com[12]), .sel(c3), .out(p[12]));
+vmsu8_mux2to1 MUXM13 (.a(out_multi[13]), .b(out_multi_com[13]), .sel(c3), .out(p[13]));
+vmsu8_mux2to1 MUXM14 (.a(out_multi[14]), .b(out_multi_com[14]), .sel(c3), .out(p[14]));
+vmsu8_mux2to1 MUXM15 (.a(out_multi[15]), .b(out_multi_com[15]), .sel(c3), .out(p[15]));
 
 endmodule
 
 
 
-module multiplier_8bit (
+module vmsu8_multiplier_8bit (
         input [7:0] a,
         input [7:0] b,
         output [15:0] p
@@ -201,23 +201,23 @@ wire [7:0] sum0;
 wire [7:4] sum1;
 wire or_out;
 
-multiplier_4bit U0 (.a(a[3:0]), .b(b[3:0]), .p({o0[7:4], p[3:0]}));
-multiplier_4bit U1 (.a(a[3:0]), .b(b[7:4]), .p(o1[7:0]));
-multiplier_4bit U2 (.a(a[7:4]), .b(b[3:0]), .p(o2[7:0]));
-multiplier_4bit U3 (.a(a[7:4]), .b(b[7:4]), .p(o3[7:0]));
+vmsu8_multiplier_4bit U0 (.a(a[3:0]), .b(b[3:0]), .p({o0[7:4], p[3:0]}));
+vmsu8_multiplier_4bit U1 (.a(a[3:0]), .b(b[7:4]), .p(o1[7:0]));
+vmsu8_multiplier_4bit U2 (.a(a[7:4]), .b(b[3:0]), .p(o2[7:0]));
+vmsu8_multiplier_4bit U3 (.a(a[7:4]), .b(b[7:4]), .p(o3[7:0]));
 
-cla_8bit CLA0 (.a(o1[7:0]), .b(o2[7:0]), .cin(1'b0), .sum(sum0[7:0]), .cout(c0));
-cla_8bit CLA1 (.a(sum0[7:0]), .b({4'b0000,o0[7:4]}), .cin(1'b0), .sum({sum1[7:4],p[7:4]}), .cout(c1));
+vmsu8_cla_8bit CLA0 (.a(o1[7:0]), .b(o2[7:0]), .cin(1'b0), .sum(sum0[7:0]), .cout(c0));
+vmsu8_cla_8bit CLA1 (.a(sum0[7:0]), .b({4'b0000,o0[7:4]}), .cin(1'b0), .sum({sum1[7:4],p[7:4]}), .cout(c1));
 
 or (or_out, c0, c1);
 
-cla_8bit CLA2 (.a(o3[7:0]), .b({3'b000,or_out,sum1[7:4]}), .cin(1'b0), .sum(p[15:8]), .cout(c2));
+vmsu8_cla_8bit CLA2 (.a(o3[7:0]), .b({3'b000,or_out,sum1[7:4]}), .cin(1'b0), .sum(p[15:8]), .cout(c2));
 
 endmodule
 
 
 
-module complementary_16bit (
+module vmsu8_complementary_16bit (
 	input [15:0] a,
 	output [15:0] c
 );
@@ -259,7 +259,7 @@ endmodule
 
 
 
-module mux2to1 (
+module vmsu8_mux2to1 (
 	input a,
 	input b,
 	input sel,
@@ -280,7 +280,7 @@ endmodule
 
 
 
-module complementary_8bit (
+module vmsu8_complementary_8bit (
 	input [7:0] a,
 	output [7:0] c
 );
@@ -306,7 +306,7 @@ endmodule
 
 
 
-module cla_8bit (
+module vmsu8_cla_8bit (
     input [7:0] a,
     input [7:0] b,
     input cin,
@@ -413,7 +413,7 @@ endmodule
 
 
 
-module multiplier_4bit (
+module vmsu8_multiplier_4bit (
         input [3:0] a,
         input [3:0] b,
         output [7:0] p
@@ -428,23 +428,23 @@ wire [3:0] sum0;
 wire [3:2] sum1;
 wire or_out;
 
-multiplier_2bit U0 (.a(a[1:0]), .b(b[1:0]), .p({o0[3:2], p[1:0]}));
-multiplier_2bit U1 (.a(a[1:0]), .b(b[3:2]), .p(o1[3:0]));
-multiplier_2bit U2 (.a(a[3:2]), .b(b[1:0]), .p(o2[3:0]));
-multiplier_2bit U3 (.a(a[3:2]), .b(b[3:2]), .p(o3[3:0]));
+vmsu8_multiplier_2bit U0 (.a(a[1:0]), .b(b[1:0]), .p({o0[3:2], p[1:0]}));
+vmsu8_multiplier_2bit U1 (.a(a[1:0]), .b(b[3:2]), .p(o1[3:0]));
+vmsu8_multiplier_2bit U2 (.a(a[3:2]), .b(b[1:0]), .p(o2[3:0]));
+vmsu8_multiplier_2bit U3 (.a(a[3:2]), .b(b[3:2]), .p(o3[3:0]));
 
-cla_4bit CLA0 (.a(o1[3:0]), .b(o2[3:0]), .cin(1'b0), .sum(sum0[3:0]), .cout(c0));
-cla_4bit CLA1 (.a(sum0[3:0]), .b({2'b00,o0[3:2]}), .cin(1'b0), .sum({sum1[3:2],p[3:2]}), .cout(c1));
+vmsu8_cla_4bit CLA0 (.a(o1[3:0]), .b(o2[3:0]), .cin(1'b0), .sum(sum0[3:0]), .cout(c0));
+vmsu8_cla_4bit CLA1 (.a(sum0[3:0]), .b({2'b00,o0[3:2]}), .cin(1'b0), .sum({sum1[3:2],p[3:2]}), .cout(c1));
 
 or (or_out, c0, c1);
 
-cla_4bit CLA2 (.a(o3[3:0]), .b({1'b0,or_out,sum1[3:2]}), .cin(1'b0), .sum(p[7:4]), .cout(c2));
+vmsu8_cla_4bit CLA2 (.a(o3[3:0]), .b({1'b0,or_out,sum1[3:2]}), .cin(1'b0), .sum(p[7:4]), .cout(c2));
 
 endmodule
 
 
 
-module cla_4bit (
+module vmsu8_cla_4bit (
     input [3:0] a,
     input [3:0] b,
     input cin,
@@ -501,7 +501,7 @@ endmodule
 
 
 
-module multiplier_2bit (
+module vmsu8_multiplier_2bit (
 	input [1:0] a,
 	input [1:0] b,
 	output [3:0] p
@@ -514,14 +514,14 @@ and (net[0],a[0],b[1]);
 and (net[1],a[1],b[0]);
 and (net[2],a[1],b[1]);
 
-half_adder U0 (.a(net[0]), .b(net[1]), .sum(p[1]), .cout(net[3]));
-half_adder U1 (.a(net[2]), .b(net[3]), .sum(p[2]), .cout(p[3]));
+vmsu8_half_adder U0 (.a(net[0]), .b(net[1]), .sum(p[1]), .cout(net[3]));
+vmsu8_half_adder U1 (.a(net[2]), .b(net[3]), .sum(p[2]), .cout(p[3]));
 
 endmodule
 
 
 
-module half_adder (
+module vmsu8_half_adder (
 	input a,
 	input b,
 	output sum,
@@ -535,7 +535,7 @@ endmodule
 
 
 
-module dff (
+module vmsu8_dff (
 	input d,
 	input clk,
 	input rst,
