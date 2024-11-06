@@ -196,7 +196,7 @@ wire [7:4] o0;
 wire [7:0] o1;
 wire [7:0] o2;
 wire [7:0] o3;
-wire c0,c1,c2;
+wire c0,c1;
 wire [7:0] sum0;
 wire [7:4] sum1;
 wire or_out;
@@ -211,7 +211,7 @@ vmsu8_cla_8bit CLA1 (.a(sum0[7:0]), .b({4'b0000,o0[7:4]}), .cin(1'b0), .sum({sum
 
 or (or_out, c0, c1);
 
-vmsu8_cla_8bit CLA2 (.a(o3[7:0]), .b({3'b000,or_out,sum1[7:4]}), .cin(1'b0), .sum(p[15:8]), .cout(c2));
+vmsu8_cla_8bit CLA2 (.a(o3[7:0]), .b({3'b000,or_out,sum1[7:4]}), .cin(1'b0), .sum(p[15:8]), .cout());
 
 endmodule
 
@@ -423,7 +423,7 @@ wire [3:2] o0;
 wire [3:0] o1;
 wire [3:0] o2;
 wire [3:0] o3;
-wire c0,c1,c2;
+wire c0,c1;
 wire [3:0] sum0;
 wire [3:2] sum1;
 wire or_out;
@@ -438,7 +438,7 @@ vmsu8_cla_4bit CLA1 (.a(sum0[3:0]), .b({2'b00,o0[3:2]}), .cin(1'b0), .sum({sum1[
 
 or (or_out, c0, c1);
 
-vmsu8_cla_4bit CLA2 (.a(o3[3:0]), .b({1'b0,or_out,sum1[3:2]}), .cin(1'b0), .sum(p[7:4]), .cout(c2));
+vmsu8_cla_4bit CLA2 (.a(o3[3:0]), .b({1'b0,or_out,sum1[3:2]}), .cin(1'b0), .sum(p[7:4]), .cout());
 
 endmodule
 
